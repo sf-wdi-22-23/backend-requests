@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap css -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	$('form').on('submit', function(e){
+  		console.log($(this).serialize());
+  	});
+  </script>
+
+
+  <title>Request</title>
+</head>
+<body>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Request Search</h1>
+        <hr>
+        <form id="search-form" method="POST" action="/search">
+          <div class="form-group">
+            <input type="text" name="queryInput" class="form-control"autofocus>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Search" class="btn btn-primary">
+          </div>
+        </form>
+
+
+        <h1>Request Post Book</h1>
+        <hr>
+        <form id="post-book-form" method="POST" action="/books">
+          <div class="form-group">
+            <input type="text" name="title" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="author" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Search" class="btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
